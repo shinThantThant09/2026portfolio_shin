@@ -1,0 +1,158 @@
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 3rem 2rem 3rem;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  max-width: 1100px;
+  background: rgba(255, 253, 239, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  box-shadow:
+    0 8px 32px rgba(132, 95, 74, 0.1),
+    0 2px 8px rgba(254, 185, 183, 0.2);
+}
+
+.about-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.about-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #845f4a;
+}
+
+.about-role {
+  font-style: italic;
+  color: #feb9b7;
+  font-size: 1.1rem;
+}
+
+.about-bio {
+  color: #845f4a;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+/* Two column skills */
+.about-skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.about-skills-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.about-skills-title {
+  font-size: 0.8rem;
+  color: #845f4a;
+  opacity: 0.5;
+  font-style: italic;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+  border-bottom: 1px solid rgba(132, 95, 74, 0.15);
+  padding-bottom: 0.3rem;
+}
+
+.about-skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.about-skills-list li {
+  font-size: 0.9rem;
+  color: #845f4a;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.about-skills-list li::before {
+  content: "✦";
+  color: #feb9b7;
+  font-size: 0.5rem;
+  flex-shrink: 0;
+}
+
+.about-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.about-btn {
+  text-decoration: none;
+  color: #845f4a;
+  border: 1.5px solid #845f4a;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  font-family: "Inclusive Sans", sans-serif;
+  font-size: 0.95rem;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.about-btn:hover {
+  background: #845f4a;
+  color: #fffdef;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 380px;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image {
+    justify-content: center;
+  }
+
+  .about-image img {
+    max-width: 100%;
+    height: 350px;
+  }
+
+  .about-skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
