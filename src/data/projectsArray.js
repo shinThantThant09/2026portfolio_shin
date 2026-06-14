@@ -28,8 +28,8 @@ const projects = [
     live: "https://youtu.be/TTxRGhsGydw?si=BBn5lRs08kib3g67",
   },
   {
-    id: "iat102-guidebook",
-    title: "IAT102 Design Guidebook",
+    id: "iat102-brandBook",
+    title: "IAT102 Design brandBook",
     category: "Graphic Design",
     description:
       "A design guidebook created as part of IAT102, exploring visual design principles through typography, layout, and brand identity.",
