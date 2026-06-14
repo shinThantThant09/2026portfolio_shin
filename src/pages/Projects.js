@@ -100,9 +100,9 @@ function Projects() {
                       backgroundImage: project.image
                         ? `url(${project.image})`
                         : "none",
-                      background: project.image
-                        ? undefined
-                        : thumbColors[index % 3],
+                      backgroundColor: !project.image
+                        ? thumbColors[index % 3]
+                        : "transparent",
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                     }}
