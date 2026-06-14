@@ -1,16 +1,12 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import projects from "../data/projectsArray";
 import "../stylingpages/Projects.css";
 
 function Projects() {
-  const navigate = useNavigate();
-
   return (
     <div className="projects-wrapper">
       <h2 className="projects-title">My Projects</h2>
       <p className="projects-sub">a collection of things I've built ✦</p>
-
       <div className="pegboard">
         {/* Scattered decorations */}
         <div
@@ -101,9 +97,14 @@ function Projects() {
                   <div
                     className="card-thumb"
                     style={{
-                      background: project.image
+                      backgroundImage: project.image
                         ? `url(${project.image})`
+                        : "none",
+                      background: project.image
+                        ? undefined
                         : thumbColors[index % 3],
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
                     }}
                   >
                     {!project.image && <span>screenshot coming soon</span>}
@@ -120,12 +121,28 @@ function Projects() {
                         </span>
                       ))}
                     </div>
-                    <button
-                      className="card-btn"
-                      onClick={() => navigate(`/projects/${project.id}`)}
-                    >
-                      View Details →
-                    </button>
+                    <div className="card-buttons">
+                      {project.live && (
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="card-btn"
+                        >
+                          Watch Demo →
+                        </a>
+                      )}
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="card-btn-outline"
+                        >
+                          GitHub →
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
