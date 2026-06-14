@@ -78,6 +78,8 @@ function Projects() {
               "rgba(212,232,194,0.3)",
             ];
 
+            const isPortrait = project.id === "chemtrails";
+
             return (
               <div
                 key={project.id}
@@ -102,9 +104,12 @@ function Projects() {
                         : "none",
                       backgroundColor: !project.image
                         ? thumbColors[index % 3]
-                        : "transparent",
-                      backgroundSize: "cover",
+                        : isPortrait
+                          ? "#f5ede0"
+                          : "transparent",
+                      backgroundSize: isPortrait ? "contain" : "cover",
                       backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
                     }}
                   >
                     {!project.image && <span>screenshot coming soon</span>}
