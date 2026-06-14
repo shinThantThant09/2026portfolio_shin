@@ -5,6 +5,15 @@ import "../stylingpages/Home.css";
 function Home() {
   const navigate = useNavigate();
 
+  const scrollToSection = (sectionId) => {
+    setTimeout(() => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  };
+
   return (
     <div className="home-wrapper">
       <div className="home-container">
@@ -14,11 +23,28 @@ function Home() {
           <h1 className="home-name">Shin Thant Thant</h1>
           <p className="home-role">UI/UX Designer | Full-stack Developer</p>
           <div className="home-buttons">
-            <button onClick={() => navigate("/about")}>About Me</button>
-            <button onClick={() => navigate("/about#projects")}>
+            <button
+              onClick={() => {
+                navigate("/about");
+                scrollToSection("about");
+              }}
+            >
+              About Me
+            </button>
+            <button
+              onClick={() => {
+                navigate("/about");
+                scrollToSection("projects");
+              }}
+            >
               Projects
             </button>
-            <button onClick={() => navigate("/about#contact")}>
+            <button
+              onClick={() => {
+                navigate("/about");
+                scrollToSection("contact");
+              }}
+            >
               Contact Me
             </button>
           </div>
