@@ -5,7 +5,6 @@ import "../stylingpages/navbar.css";
 function Navbar() {
   const location = useLocation();
 
-  // Smooth scroll to section
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -16,52 +15,31 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-inner">
-        {/* Logo links back to home page */}
         <Link to="/" className="navbar-logo">
           SHIN
         </Link>
-
         <div className="navbar-links">
-          {/* If on about page, scroll to section. Otherwise navigate to /about with hash */}
-
-          <a
-            href="/about#about"
+          <Link
+            to="/about"
             className={`nav-pill ${location.pathname === "/about" ? "active" : ""}`}
-            onClick={(e) => {
-              if (location.pathname === "/about") {
-                e.preventDefault();
-                scrollToSection("about");
-              }
-            }}
+            onClick={() => setTimeout(() => scrollToSection("about"), 100)}
           >
             About Me
-          </a>
-
-          <a
-            href="/about#projects"
+          </Link>
+          <Link
+            to="/about"
             className="nav-pill"
-            onClick={(e) => {
-              if (location.pathname === "/about") {
-                e.preventDefault();
-                scrollToSection("projects");
-              }
-            }}
+            onClick={() => setTimeout(() => scrollToSection("projects"), 100)}
           >
             Projects
-          </a>
-
-          <a
-            href="/about#contact"
+          </Link>
+          <Link
+            to="/about"
             className="nav-pill"
-            onClick={(e) => {
-              if (location.pathname === "/about") {
-                e.preventDefault();
-                scrollToSection("contact");
-              }
-            }}
+            onClick={() => setTimeout(() => scrollToSection("contact"), 100)}
           >
             Contact Me
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

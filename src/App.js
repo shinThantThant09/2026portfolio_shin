@@ -1,5 +1,11 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import {
+  HashRouter,
+  Routes,
+  Route,
+  useLocation,
+  Navigate,
+} from "react-router-dom";
 import Navbar from "./components/navbar";
 import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
@@ -23,13 +29,14 @@ function Layout() {
       {/* short circuit evaluation-> In JavaScript, && means "AND".
           If the left side is true → evaluate and return the right side
           If the left side is false → stop, return nothing*/}
-      {/* nesting that control the page navigation and url starts here*/}
 
+      {/* nesting that control the page navigation and url starts here*/}
       <main className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutMe />} />
           <Route path="/projects/:id" element={<ProjectsDetail />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </main>
     </div>
@@ -38,9 +45,9 @@ function Layout() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Layout />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
