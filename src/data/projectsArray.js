@@ -37,7 +37,7 @@ const projects = [
     title: "Furis Pet Store",
     category: "Interaction Design Method",
     description:
-      "A real-client UX project with Furis Pet Store, spanning 2 months of research, storyboarding, user journey mapping, and poster design to deliver a final solution that improves their in-store customer experience.",
+      "A real-client project with Furis Pet Store, spanning 2 months of research, storyboarding, user journey mapping, and poster design to deliver a final solution that improves their in-store customer experience.",
     techStack: ["Figma", "UX Research", "Storyboarding", "Journey Mapping"],
     image: furisPetImg,
     color: "#d4e8c2",
