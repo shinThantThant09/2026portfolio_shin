@@ -12,8 +12,9 @@ const projects = [
     techStack: ["React", "Node.js", "MongoDB", "JWT", "Express"],
     image: pawthImg,
     color: "#feb9b7",
-    github: "https://github.sfu.ca/stt5/PetApp_IAt459",
+    github: "https://github.com/shinThantThant09",
     live: "https://youtu.be/mMx9AH1CtUE?si=kWlr-117fnwxKgmU",
+    download: "",
   },
   {
     id: "chemtrails",
@@ -26,10 +27,11 @@ const projects = [
     color: "#edfdb6",
     github: "https://github.com/shinThantThant09",
     live: "https://youtu.be/TTxRGhsGydw?si=BBn5lRs08kib3g67",
+    download: "",
   },
   {
-    id: "iat102-brandBook",
-    title: "IAT102 Design brandBook",
+    id: "BrowseAI-BrandBook",
+    title: "IAT102 BrandBook for BrowseAI",
     category: "Graphic Design",
     description:
       "A design guidebook created as part of IAT102, exploring visual design principles through typography, layout, and brand identity.",
@@ -38,6 +40,7 @@ const projects = [
     color: "#d4e8c2",
     github: "",
     live: "",
+    download: "/2026portfolio_shin/BrandBook_ShinThant.pdf",
   },
 ];
 
