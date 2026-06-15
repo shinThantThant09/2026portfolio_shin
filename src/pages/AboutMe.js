@@ -55,7 +55,7 @@ function AboutMe() {
                 Download Resume
               </a>
               <a
-                href={`${process.env.PUBLIC_URL}/CoverLetter_ShinThantThant.pdf`}
+                href={`${process.env.PUBLIC_URL}/CoverLetter_ShinThantThantt.pdf`}
                 download
                 className="about-btn"
               >
