@@ -20,7 +20,6 @@ function AboutMe() {
               into real, inclusive and intuitive digital experiences through
               both design and programming.
             </p>
-
             {/* Two column skills section */}
             <div className="about-skills-grid">
               <div className="about-skills-col">
@@ -46,18 +45,17 @@ function AboutMe() {
                 </ul>
               </div>
             </div>
-
             {/* Download buttons */}
             <div className="about-buttons">
               <a
-                href="/Resume_ShinThantThant.pdf"
+                href={`${process.env.PUBLIC_URL}/Resume_ShinThantThant.pdf`}
                 download
                 className="about-btn"
               >
                 Download Resume
               </a>
               <a
-                href="/CoverLetter_ShinThantThant.pdf"
+                href={`${process.env.PUBLIC_URL}/CoverLetter_ShinThantThant.pdf`}
                 download
                 className="about-btn"
               >
@@ -65,19 +63,16 @@ function AboutMe() {
               </a>
             </div>
           </div>
-
           {/* Right side - photo */}
           <div className="about-image">
             <img src={profilePic} alt="Shin Thant Thant" />
           </div>
         </div>
       </section>
-
       {/* Projects Section */}
       <section id="projects">
         <Projects />
       </section>
-
       {/* Contact Section */}
       <section id="contact">
         <ContactMe />
