@@ -25,7 +25,6 @@ function AboutMe() {
             <div className="about-skills-grid">
               <div className="about-skills-col">
                 <p className="about-skills-title">Skills</p>
-                <p className="about-skills-title">Skills</p>
                 <ul className="about-skills-list">
                   <li>C++</li>
                   <li>Java / Javascript</li>

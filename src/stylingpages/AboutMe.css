@@ -70,8 +70,8 @@
   letter-spacing: 0.05rem;
   text-transform: uppercase;
   margin-bottom: 0.3rem;
-  border-bottom: 1px solid rgba(132, 95, 74, 0.15);
-  padding-bottom: 0.3rem;
+  border-bottom: 1px solid rgba(75, 54, 42, 0.15);
+  padding-bottom: 0.2rem;
 }
 
 .about-skills-list {
