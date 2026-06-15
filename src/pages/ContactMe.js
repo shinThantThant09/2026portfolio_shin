@@ -71,7 +71,7 @@ function ContactMe() {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/shinthantthant"
+                href="https://www.linkedin.com/in/shinn-thant-b17850196/"
                 target="_blank"
                 rel="noreferrer"
                 className="social-icon-btn"

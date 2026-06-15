@@ -37,8 +37,14 @@ const projects = [
     title: "Furis Pet Store",
     category: "Interaction Design Method",
     description:
-      "A real-client project with Furis Pet Store, spanning 2 months of research, storyboarding, user journey mapping, and poster design to deliver a final solution that improves their in-store customer experience.",
-    techStack: ["Figma", "UX Research", "Storyboarding", "Journey Mapping"],
+      "A real-client group project with Furis Pet Store in New Westminister, spanning 2 months of research, storyboarding, user journey mapping, and poster design to deliver a final solution that improves their in-store customer experience.",
+    techStack: [
+      "Figma",
+      "UX Research",
+      "Storyboarding",
+      "Journey Mapping",
+      "Prototyping",
+    ],
     image: furisPetImg,
     color: "#d4e8c2",
     github: "",
@@ -49,7 +55,7 @@ const projects = [
   },
   {
     id: "BrowseAI-BrandBook",
-    title: "IAT102 BrandBook for BrowseAI",
+    title: "BrandBook for BrowseAI",
     category: "Graphic Design",
     description:
       "A design guidebook created as part of IAT102, exploring visual design principles through typography, layout, and brand identity.",
