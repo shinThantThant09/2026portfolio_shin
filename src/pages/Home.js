@@ -1,6 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../stylingpages/Home.css";
+import pawthImg from "../assets/pawth.jpg";
+import chemtrailsImg from "../assets/chemtrails.jpg";
+import brandBookImg from "../assets/brandBook.jpg";
 
 function Home() {
   const navigate = useNavigate();
@@ -97,25 +100,31 @@ function Home() {
                       <div
                         className="screen-item"
                         style={{
-                          background: "rgba(254,185,183,0.5)",
                           gridColumn: "1",
                           gridRow: "1 / span 2",
+                          backgroundImage: `url(${chemtrailsImg})`,
+                          backgroundSize: "contain",
+                          backgroundPosition: "center",
+                          backgroundRepeat: "no-repeat",
+                          backgroundColor: "#f5ede0",
                         }}
-                      >
-                        <span>Pawth</span>
-                      </div>
+                      />
                       <div
                         className="screen-item"
-                        style={{ background: "rgba(237,253,182,0.5)" }}
-                      >
-                        <span>Chemtrails</span>
-                      </div>
+                        style={{
+                          backgroundImage: `url(${pawthImg})`,
+                          backgroundSize: "cover",
+                          backgroundPosition: "center",
+                        }}
+                      />
                       <div
                         className="screen-item"
-                        style={{ background: "rgba(212,232,194,0.5)" }}
-                      >
-                        <span>CivicSafe</span>
-                      </div>
+                        style={{
+                          backgroundImage: `url(${brandBookImg})`,
+                          backgroundSize: "cover",
+                          backgroundPosition: "center",
+                        }}
+                      />
                     </div>
                   </div>
                 </div>
