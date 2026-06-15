@@ -46,7 +46,7 @@ body {
 .blob-1 {
   width: 500px;
   height: 500px;
-  background: #feb9b7;
+  background: #f8acaa;
   top: -100px;
   left: -100px;
 }
@@ -54,7 +54,7 @@ body {
 .blob-2 {
   width: 400px;
   height: 400px;
-  background: #edfdb6;
+  background: #dceea1;
   top: 200px;
   right: -100px;
 }
@@ -62,7 +62,7 @@ body {
 .blob-3 {
   width: 350px;
   height: 350px;
-  background: #feb9b7;
+  background: #dd9d9b;
   bottom: -50px;
   left: 30%;
 }

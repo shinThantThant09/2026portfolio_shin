@@ -29,6 +29,7 @@ function AboutMe() {
                   <li>C++</li>
                   <li>Java / Javascript</li>
                   <li>Python</li>
+                  <li>HTML/CSS</li>
                   <li>React/ React Native</li>
                   <li>Node.js /Express</li>
                 </ul>
@@ -37,7 +38,9 @@ function AboutMe() {
                 <p className="about-skills-title">Tools</p>
                 <ul className="about-skills-list">
                   <li>Figma</li>
-                  <li>Adobe Creative Suite</li>
+                  <li>VS code</li>
+                  <li>Arduino IDE</li>
+                  <li>Processing</li>
                   <li>MongoDB / Firebase</li>
                   <li>Git / GitHub</li>
                 </ul>
