@@ -54,13 +54,6 @@ function AboutMe() {
               >
                 Download Resume
               </a>
-              <a
-                href={`${process.env.PUBLIC_URL}/CoverLetter_ShinThantThantt.pdf`}
-                download
-                className="about-btn"
-              >
-                Download Cover Letter
-              </a>
             </div>
           </div>
           {/* Right side - photo */}
