@@ -12,7 +12,7 @@ const projects = [
     techStack: ["React", "Node.js", "MongoDB", "JWT", "Express"],
     image: pawthImg,
     color: "#feb9b7",
-    github: "https://github.com/shinThantThant09",
+    github: "https://github.sfu.ca/stt5/PetApp_IAt459",
     live: "https://youtu.be/mMx9AH1CtUE?si=kWlr-117fnwxKgmU",
   },
   {
