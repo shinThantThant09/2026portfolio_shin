@@ -92,13 +92,15 @@ function Projects() {
               const isDocument =
                 project.id === "furis-pet" ||
                 project.id === "BrowseAI-BrandBook";
-              // Mobile app projects show inside the phone mockup
-              const isPhone = ["chemtrails", "inscope"].includes(project.id);
+              // Plain app screenshots go inside the CSS phone mockup
+              const isPhone = project.id === "chemtrails";
+              // Images that already have their own phone frame show as is
+              const isMockup = project.id === "inscope";
 
               return (
                 <div
                   key={project.id}
-                  className="card-wrap"
+                  className={`card-wrap ${index < 2 ? "card-top" : "card-bottom"}`}
                   style={{ transform: `rotate(${rotations[index % 4]}deg)` }}
                 >
                   <div
@@ -115,17 +117,21 @@ function Projects() {
                       </div>
                     ) : (
                       <div
-                        className="card-thumb"
+                        className={`card-thumb ${isMockup ? "card-thumb-mockup" : ""}`}
                         style={{
                           backgroundImage: project.image
                             ? `url(${project.image})`
                             : "none",
                           backgroundColor: !project.image
                             ? thumbColors[index % 4]
-                            : isDocument
+                            : isDocument || isMockup
                               ? "#fffef8"
                               : "transparent",
-                          backgroundSize: isDocument ? "75%" : "cover",
+                          backgroundSize: isDocument
+                            ? "75%"
+                            : isMockup
+                              ? "contain"
+                              : "cover",
                           backgroundPosition: "center",
                           backgroundRepeat: "no-repeat",
                         }}
@@ -142,20 +148,6 @@ function Projects() {
                       <div className="card-category">{project.category}</div>
                       <div className="card-title">{project.title}</div>
                       <div className="card-desc">{project.description}</div>
-
-                      {/* Role line: only shows if the project has one */}
-                      {project.role && (
-                        <div
-                          className="card-role"
-                          style={{
-                            fontSize: "0.8rem",
-                            marginTop: "0.5rem",
-                            opacity: 0.85,
-                          }}
-                        >
-                          <strong>My role:</strong> {project.role}
-                        </div>
-                      )}
 
                       <div className="card-tags">
                         {project.techStack.map((tech) => (
@@ -202,17 +194,7 @@ function Projects() {
                             rel="noreferrer"
                             className="card-btn"
                           >
-                            Presentation →
-                          </a>
-                        )}
-                        {project.figmaProcess && (
-                          <a
-                            href={project.figmaProcess}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="card-btn-outline"
-                          >
-                            Design Process →
+                            View the presentation demo →
                           </a>
                         )}
                         {project.download && (

@@ -6,7 +6,7 @@
 }
 .projects-inner {
   width: 100%;
-  max-width: 1100px;
+  max-width: 68.75rem;
 }
 .projects-title {
   font-size: 2rem;
@@ -33,14 +33,23 @@
   );
   background-size: 1.375rem 1.375rem;
 }
+
+/* Grid: 2 cards on top, 3 cards on the bottom.
+   The grid has 6 columns. Top cards take 3 each, bottom cards take 2 each. */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 22rem));
-  gap: 2.5rem;
-  justify-content: center;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 2.5rem 2rem;
   position: relative;
   z-index: 2;
 }
+.card-wrap.card-top {
+  grid-column: span 3;
+}
+.card-wrap.card-bottom {
+  grid-column: span 2;
+}
+
 .card-wrap {
   position: relative;
   padding-top: 1.2rem;
@@ -76,6 +85,7 @@
   background: #fffef8;
   border-radius: 0.375rem;
   width: 100%;
+  height: 100%;
   border: 1.5px solid rgba(132, 95, 74, 0.25);
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(132, 95, 74, 0.15);
@@ -90,6 +100,18 @@
   font-style: italic;
   width: 100%;
 }
+/* Top row cards are wider, so their image area is taller */
+.card-top .card-thumb {
+  height: 18rem;
+}
+/* Image that already includes a phone frame: show the whole thing, with space around it */
+.card-thumb-mockup {
+  padding: 1rem 0;
+  background-origin: content-box;
+  /* Fill the whole image area with a soft color, so it reads as one block like the other cards */
+  background-color: #eef0e3 !important;
+}
+
 .card-thumb-phone {
   background-color: #fffef8;
   display: flex;
@@ -119,6 +141,7 @@
   line-height: 1.5;
   margin-bottom: 0.6rem;
 }
+
 .card-tags {
   display: flex;
   gap: 0.25rem;
@@ -222,7 +245,8 @@
   width: 100%;
   border-radius: 0.7rem;
   overflow: hidden;
-  background-color: #fff;
+  /* Dark, not white: any see-through edges in a screenshot now blend into the phone */
+  background-color: #1a1a1a;
 }
 .phone-home-bar {
   width: 1.8rem;
@@ -232,14 +256,23 @@
   flex-shrink: 0;
 }
 
-@media (max-width: 768px) {
+/* Tablet: 2 cards per row */
+@media (max-width: 64rem) {
+  .cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .card-wrap.card-top,
+  .card-wrap.card-bottom {
+    grid-column: span 1;
+  }
+}
+
+/* Phone: 1 card per row */
+@media (max-width: 48rem) {
   .projects-wrapper {
     padding: 2rem 1.5rem;
   }
   .cards-grid {
     grid-template-columns: 1fr;
-  }
-  .project-card {
-    width: 100%;
   }
 }

@@ -2,7 +2,7 @@ import chemtrailsImg from "../assets/chemtrails.jpg";
 import pawthImg from "../assets/pawth.jpg";
 import brandBookImg from "../assets/brandBook.jpg";
 import furisPetImg from "../assets/furisPet.jpg";
-import inscopeImg from "../assets/inscope.jpg";
+import inscopeImg from "../assets/inscope.png";
 
 const projects = [
   {
@@ -11,7 +11,6 @@ const projects = [
     category: "Experience Design",
     description:
       "InScope started with people. We studied their needs and problems, designed a solution, and then looked for clients who could use our design innovation.",
-    role: "UI/UX designer and ideator on a team of six. From choosing the colors layouts to creating the wireframes and the prototype.",
     techStack: [
       "Figma",
       "UX Research",
@@ -23,10 +22,12 @@ const projects = [
     color: "#F9FFB2",
     github: "",
     live: "",
-    figma: "",
-    // Paste your two Figma links between the quotes
-    figmaProcess: "",
-    figmaPresentation: "",
+    // "View on Figma" button
+    figma:
+      "https://www.figma.com/design/WETSwBRjp8T4BeznvPJ0Rq/438-Client-Phase-DESIGN-EXPERIENCE?node-id=1842-2673&t=aN0Qx4fc9zRzlnhG-1",
+    // "View the presentation demo" button
+    figmaPresentation:
+      "https://www.figma.com/proto/WETSwBRjp8T4BeznvPJ0Rq/438-Client-Phase-DESIGN-EXPERIENCE?node-id=2310-456&p=f&viewport=-3342%2C-11%2C0.13&t=4YahdXkLdnRRb7Q4-1&scaling=contain&content-scaling=fixed&page-id=2329%3A234",
     download: "",
   },
   {
