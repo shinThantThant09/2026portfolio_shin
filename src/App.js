@@ -7,7 +7,6 @@ import {
   Navigate,
 } from "react-router-dom";
 import Navbar from "./components/navbar";
-import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
 import ProjectsDetail from "./pages/ProjectsDetail";
 import "./App.css";
@@ -33,7 +32,6 @@ function Layout() {
       {/* nesting that control the page navigation and url starts here*/}
       <main className="main-content">
         <Routes>
-          <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutMe />} />
           <Route path="/projects/:id" element={<ProjectsDetail />} />
           <Route path="*" element={<Navigate to="/" />} />
