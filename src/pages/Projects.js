@@ -92,7 +92,8 @@ function Projects() {
               const isDocument =
                 project.id === "furis-pet" ||
                 project.id === "BrowseAI-BrandBook";
-              const isPhone = project.id === "chemtrails";
+              // Mobile app projects show inside the phone mockup
+              const isPhone = ["chemtrails", "inscope"].includes(project.id);
 
               return (
                 <div
@@ -141,6 +142,21 @@ function Projects() {
                       <div className="card-category">{project.category}</div>
                       <div className="card-title">{project.title}</div>
                       <div className="card-desc">{project.description}</div>
+
+                      {/* Role line: only shows if the project has one */}
+                      {project.role && (
+                        <div
+                          className="card-role"
+                          style={{
+                            fontSize: "0.8rem",
+                            marginTop: "0.5rem",
+                            opacity: 0.85,
+                          }}
+                        >
+                          <strong>My role:</strong> {project.role}
+                        </div>
+                      )}
+
                       <div className="card-tags">
                         {project.techStack.map((tech) => (
                           <span key={tech} className="tag">
@@ -177,6 +193,26 @@ function Projects() {
                             className="card-btn-outline"
                           >
                             View on Figma →
+                          </a>
+                        )}
+                        {project.figmaPresentation && (
+                          <a
+                            href={project.figmaPresentation}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="card-btn"
+                          >
+                            Presentation →
+                          </a>
+                        )}
+                        {project.figmaProcess && (
+                          <a
+                            href={project.figmaProcess}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="card-btn-outline"
+                          >
+                            Design Process →
                           </a>
                         )}
                         {project.download && (

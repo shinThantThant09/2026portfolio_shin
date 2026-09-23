@@ -2,8 +2,33 @@ import chemtrailsImg from "../assets/chemtrails.jpg";
 import pawthImg from "../assets/pawth.jpg";
 import brandBookImg from "../assets/brandBook.jpg";
 import furisPetImg from "../assets/furisPet.jpg";
+import inscopeImg from "../assets/inscope.jpg";
 
 const projects = [
+  {
+    id: "inscope",
+    title: "InScope by Coast Capital",
+    category: "Experience Design",
+    description:
+      "InScope started with people. We studied their needs and problems, designed a solution, and then looked for clients who could use our design innovation.",
+    role: "UI/UX designer and ideator on a team of six. From choosing the colors layouts to creating the wireframes and the prototype.",
+    techStack: [
+      "Figma",
+      "UX Research",
+      "Wireframing",
+      "Prototyping",
+      "Client Pitch",
+    ],
+    image: inscopeImg,
+    color: "#F9FFB2",
+    github: "",
+    live: "",
+    figma: "",
+    // Paste your two Figma links between the quotes
+    figmaProcess: "",
+    figmaPresentation: "",
+    download: "",
+  },
   {
     id: "pawth",
     title: "Pawth",
