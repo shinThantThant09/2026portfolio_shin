@@ -1,18 +1,11 @@
 import React from "react";
-import {
-  HashRouter,
-  Routes,
-  Route,
-  useLocation,
-  Navigate,
-} from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/navbar";
 import AboutMe from "./pages/AboutMe";
 import ProjectsDetail from "./pages/ProjectsDetail";
 import "./App.css";
 
 function Layout() {
-  const location = useLocation();
   return (
     <div className="app-container">
       {/* Blob background layer */}
@@ -22,19 +15,18 @@ function Layout() {
         <div className="blob blob-3"></div>
       </div>
 
-      {/* Hide navbar on home page */}
-      {location.pathname !== "/" && <Navbar />}
-      {/*needs to know which page we are on because we are hiding top nav bar on home page*/}
-      {/* short circuit evaluation-> In JavaScript, && means "AND".
-          If the left side is true → evaluate and return the right side
-          If the left side is false → stop, return nothing*/}
+      {/* Navbar shows on every page now, because the cover page is removed */}
+      <Navbar />
 
       {/* nesting that control the page navigation and url starts here*/}
       <main className="main-content">
         <Routes>
+          {/* The first page people see: send "/" to About */}
+          <Route path="/" element={<Navigate to="/about" replace />} />
           <Route path="/about" element={<AboutMe />} />
           <Route path="/projects/:id" element={<ProjectsDetail />} />
-          <Route path="*" element={<Navigate to="/" />} />
+          {/* Any unknown page also goes to About */}
+          <Route path="*" element={<Navigate to="/about" replace />} />
         </Routes>
       </main>
     </div>
