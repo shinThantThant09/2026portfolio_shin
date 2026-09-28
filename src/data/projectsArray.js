@@ -10,7 +10,7 @@ const projects = [
     title: "InScope by Coast Capital",
     category: "Experience Design",
     description:
-      "InScope started with people. We studied their needs and problems, designed a solution, and then looked for clients who could use our design innovation.",
+      "InScope started with people. We studied their needs and problems, designed a solution. Then, we looked for clients who could use our design innovation.",
     techStack: [
       "Figma",
       "UX Research",
