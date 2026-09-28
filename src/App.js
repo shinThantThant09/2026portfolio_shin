@@ -1,6 +1,7 @@
 import React from "react";
 import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/navbar";
+import ScrollArrow from "./components/ScrollArrows";
 import AboutMe from "./pages/AboutMe";
 import ProjectsDetail from "./pages/ProjectsDetail";
 import "./App.css";
@@ -29,6 +30,9 @@ function Layout() {
           <Route path="*" element={<Navigate to="/about" replace />} />
         </Routes>
       </main>
+
+      {/* Floating arrow that scrolls down, then back up to the top */}
+      <ScrollArrow />
     </div>
   );
 }

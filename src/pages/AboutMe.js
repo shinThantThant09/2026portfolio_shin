@@ -13,7 +13,7 @@ function AboutMe() {
           {/* Left side - text */}
           <div className="about-text">
             <p className="about-eyebrow">
-              Third year at SFU, School of Interactive Arts and Technology
+              Fourth year at SFU, School of Interactive Arts and Technology
             </p>
             <h1 className="about-name">Shin Thant Thant</h1>
             <p className="about-role">UI/UX Designer | Full-stack Developer</p>
@@ -47,7 +47,7 @@ function AboutMe() {
                 See my work
               </a>
               <a
-                href={`${process.env.PUBLIC_URL}/Resume_ShinThantThant.pdf`}
+                href={`${process.env.PUBLIC_URL}/ShinThantThant_Resume.pdf`}
                 download
                 className="about-link"
               >
