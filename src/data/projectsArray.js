@@ -11,7 +11,7 @@ const projects = [
     category: "Experience Design",
     role: "Ideator, UI/UX Designer, Prototyper, Pitch Presenter",
     description:
-      "We researched the financial needs and challenges of younger generations and found a gap between their trust in banks and their ambitions. Many of them have major financial goals, such as buying a house or paying off student loans, but they feel uncertain about relying to banks for support. These insights led us to design an app concept that helps young adults set goals, build personalized savings plans, and understand their spending habits. We then explored potential clients who could bring this concept to their customers.",
+      "We researched the financial needs and challenges of younger generations and found a gap between their trust in banks and their ambitions. Many of them have major financial goals, such as buying a house or paying off student loans. However, they also feel uncertain about relying to banks for support. These insights led us to design an app concept that helps young adults set goals, build personalized savings plans, and understand their spending habits. We then explored potential clients who could bring this concept to their customers.",
     techStack: [
       "Figma",
       "UX Research",
