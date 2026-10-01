@@ -11,7 +11,6 @@ const matById = {
   "BrowseAI-BrandBook": "#EADDE0",
 };
 
-// How each image is shown. Anything not listed shows as a screenshot.
 const visualById = {
   inscope: "mockup",
   chemtrails: "phone",
@@ -111,14 +110,69 @@ function ProjectButtons({ project }) {
   );
 }
 
+// Tools as one quiet line of text, e.g. "Figma · UX Research · Wireframing"
+function ProjectTools({ tools }) {
+  if (!tools || tools.length === 0) return null;
+
+  return (
+    <p className="project-tools">
+      <span className="project-label">Tools:</span>
+      <span className="project-tools-text">{tools.join(" · ")}</span>
+    </p>
+  );
+}
+
+//My role as highlighted boxes. The text splits at each comma.
+function ProjectRole({ role, color }) {
+  if (!role) return null;
+
+  const roles = role
+    .split(",")
+    .map((item) => item.trim())
+    .filter(Boolean);
+
+  return (
+    <div className="project-role">
+      <span className="project-label">My role</span>
+      <ul className="project-role-list">
+        {roles.map((item) => (
+          <li
+            key={item}
+            className="project-role-tag"
+            style={{ backgroundColor: color || "#EEE6DA" }}
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+// Description can be one string or a list of short paragraphs.
+function ProjectSummary({ text }) {
+  if (!text) return null;
+  const paragraphs = Array.isArray(text) ? text : [text];
+
+  return (
+    <div className="project-summary-wrap">
+      {paragraphs.map((paragraph, index) => (
+        <p key={index} className="project-summary">
+          {paragraph}
+        </p>
+      ))}
+    </div>
+  );
+}
+
 function ProjectText({ project }) {
   return (
     <div className="project-text">
       <p className="project-category">{project.category}</p>
       <h3 className="project-title">{project.title}</h3>
-      <p className="project-summary">
-        {project.summary || project.description}
-      </p>
+      <ProjectTools tools={project.techStack} />
+      <ProjectRole role={project.role} color={project.color} />
+      <ProjectSummary text={project.summary || project.description} />
       <ProjectButtons project={project} />
     </div>
   );

@@ -5,7 +5,7 @@
 }
 
 .work-inner {
-  max-width: 70rem;
+  max-width: 76rem;
   margin: 0 auto;
 }
 
@@ -20,7 +20,7 @@
 .work-title {
   margin: 0;
   font-weight: 700;
-  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-size: clamp(2.25rem, 4.5vw, 3.25rem);
   line-height: 1;
   color: var(--ink, #2b211b);
 }
@@ -34,13 +34,14 @@
 /* Featured project */
 .work-featured {
   display: grid;
-  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
-  gap: 4rem;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 3.5rem;
   align-items: center;
 }
 
 .work-featured .project-mat {
-  aspect-ratio: 7 / 5;
+  aspect-ratio: 5 / 4;
+  padding: 2rem;
 }
 
 .work-featured .project-category {
@@ -48,7 +49,7 @@
 }
 
 .work-featured .project-title {
-  font-size: 1.875rem;
+  font-size: clamp(1.375rem, 2vw, 1.625rem);
 }
 
 /* Grid of the other projects */
@@ -58,6 +59,10 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   column-gap: 3.5rem;
   row-gap: 5.5rem;
+}
+
+.work-card {
+  min-width: 0;
 }
 
 /* Image mat */
@@ -104,6 +109,10 @@
 }
 
 /* Project text */
+.project-text {
+  min-width: 0;
+}
+
 .project-category {
   margin: 1.5rem 0 0;
   font-size: 0.875rem;
@@ -112,21 +121,87 @@
 
 .project-title {
   margin: 0.625rem 0 0;
-  font-size: 1.375rem;
+  font-size: clamp(1.25rem, 2vw, 1.375rem);
   line-height: 1.2;
   color: var(--ink, #2b211b);
 }
 
-.project-summary {
-  margin: 0.75rem 0 0;
+/* Small uppercase label shared by "Tools" and "My role" */
+.project-label {
+  flex-shrink: 0;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted, #6b5f55);
+}
+
+/* Tools line, plain text */
+.project-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.5rem;
+  margin: 0.625rem 0 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.project-tools-text {
+  font-weight: 500;
+  color: var(--ink, #2b211b);
+  overflow-wrap: anywhere;
+}
+
+/* "My role" with highlighted boxes */
+.project-role {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.project-role-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project-role-tag {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 0.4375rem 0.75rem;
+  border-radius: 999rem;
+  border: 0.0625rem solid rgba(43, 33, 27, 0.08);
+  color: var(--ink, #2b211b);
+  white-space: nowrap;
+}
+
+/* Description, with clear space above it */
+.project-summary-wrap {
+  margin-top: 1.75rem;
   max-width: 30rem;
+}
+
+.project-summary {
+  margin: 0;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.7;
+  color: #4a3f37;
+}
+
+.project-summary + .project-summary {
+  margin-top: 0.75rem;
 }
 
 /* Buttons */
 .card-buttons {
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
@@ -136,11 +211,13 @@
 .card-btn-outline {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   min-height: 2.75rem;
   padding: 0 1.25rem;
   border-radius: 999rem;
   font-size: 0.875rem;
   font-weight: 500;
+  text-align: center;
   text-decoration: none;
   transition:
     background 0.2s ease,
@@ -223,7 +300,22 @@
   background: rgba(255, 255, 255, 0.7);
 }
 
-/* Tablet and phone */
+/* Small laptop */
+@media (max-width: 72rem) {
+  .work-featured {
+    gap: 2.5rem;
+  }
+
+  .work-grid {
+    column-gap: 2.5rem;
+  }
+
+  .project-mat {
+    padding: 2rem;
+  }
+}
+
+/* Tablet */
 @media (max-width: 56rem) {
   .work {
     padding: 5rem 1.25rem;
@@ -234,12 +326,12 @@
     gap: 0;
   }
 
-  .work-featured .project-category {
-    margin-top: 1.5rem;
+  .work-featured .project-mat {
+    aspect-ratio: 4 / 3;
   }
 
-  .work-featured .project-title {
-    font-size: 1.625rem;
+  .work-featured .project-category {
+    margin-top: 1.5rem;
   }
 
   .work-grid {
@@ -250,5 +342,69 @@
 
   .project-mat {
     padding: 1.5rem;
+  }
+
+  .project-summary-wrap {
+    max-width: 40rem;
+  }
+}
+
+/* Small phone */
+@media (max-width: 36rem) {
+  .work {
+    padding: 4rem 1rem;
+  }
+
+  .work-header {
+    margin-bottom: 2rem;
+  }
+
+  .work-grid {
+    margin-top: 3.5rem;
+    row-gap: 3.5rem;
+  }
+
+  .project-mat {
+    padding: 1rem;
+  }
+
+  .project-img-document {
+    width: 85%;
+  }
+
+  .phone-frame {
+    max-height: 16rem;
+    border-radius: 1.375rem;
+  }
+
+  .phone-screen {
+    border-radius: 1rem;
+  }
+
+  .project-summary-wrap {
+    margin-top: 1.5rem;
+  }
+
+  .project-summary {
+    font-size: 0.9375rem;
+  }
+
+  .card-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .card-btn,
+  .card-btn-outline {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* Calm motion for people who turn it off in their settings */
+@media (prefers-reduced-motion: reduce) {
+  .card-btn,
+  .card-btn-outline {
+    transition: none;
   }
 }

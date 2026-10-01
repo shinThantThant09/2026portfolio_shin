@@ -9,8 +9,9 @@ const projects = [
     id: "inscope",
     title: "InScope by Coast Capital",
     category: "Experience Design",
+    role: "Ideator, UI/UX Designer, Prototyper, Pitch Presenter",
     description:
-      "InScope started with people. We studied their needs and problems, designed a solution. Then, we looked for clients who could use our design innovation.",
+      "We researched the financial needs and challenges of younger generations and found a gap between their trust in banks and their ambitions. Many of them have major financial goals, such as buying a house or paying off student loans, but they feel uncertain about relying to banks for support. These insights led us to design an app concept that helps young adults set goals, build personalized savings plans, and understand their spending habits. We then explored potential clients who could bring this concept to their customers.",
     techStack: [
       "Figma",
       "UX Research",
@@ -34,6 +35,7 @@ const projects = [
     id: "pawth",
     title: "Pawth",
     category: "Full-stack Web App",
+    role: "Ideator, Designer, Programmer",
     description:
       "A full-stack pet social media platform where pet owners can share, like, and save posts about their pets.",
     techStack: ["React", "Node.js", "MongoDB", "JWT", "Express"],
@@ -48,11 +50,12 @@ const projects = [
     id: "chemtrails",
     title: "Chemtrails",
     category: "Mobile App",
+    role: "Ideator, Designer, Programmer",
     description:
       "A React Native travel planning app with Firebase authentication, Google Places API, interactive maps, photo journal entries, and text-to-speech features.",
     techStack: ["React Native", "Firebase", "Google Places API", "Expo"],
     image: chemtrailsImg,
-    color: "#edfdb6",
+    color: "#f7d3fa",
     github: "https://github.sfu.ca/stt5/IAT359_TravelApp_FinalProject",
     live: "https://youtu.be/TTxRGhsGydw?si=BBn5lRs08kib3g67",
     figma: "",
@@ -62,8 +65,9 @@ const projects = [
     id: "furis-pet",
     title: "Furis Pet Store",
     category: "Interaction Design Method",
+    role: "Ideator, Researcher, UI/UX Designer",
     description:
-      "A real-client group project with Furis Pet Store in New Westminister, spanning 2 months of research, storyboarding, user journey mapping, and poster design to deliver a final solution that improves their in-store customer experience.",
+      "A real-client group project with Furis Pet Store in New Westminster, spanning 2 months of research, storyboarding, user journey mapping, and poster design to deliver a final solution that improves their in-store customer experience.",
     techStack: [
       "Figma",
       "UX Research",
@@ -83,11 +87,12 @@ const projects = [
     id: "BrowseAI-BrandBook",
     title: "BrandBook for BrowseAI",
     category: "Graphic Design",
+    role: "Individual Project",
     description:
       "A design guidebook created as part of IAT102, exploring visual design principles through typography, layout, and brand identity.",
     techStack: ["Adobe Photoshop", "Adobe Illustrator", "Figma"],
     image: brandBookImg,
-    color: "#d4e8c2",
+    color: "rgb(191, 231, 255)",
     github: "",
     live: "",
     figma: "",
