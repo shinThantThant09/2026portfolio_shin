@@ -38,7 +38,7 @@ function AboutMe() {
               </div>
               <div className="about-skills-row">
                 <dt>I also code in</dt>
-                <dd>Java, JavaScript, Python, C++</dd>
+                <dd>Java, JavaScript, HTML, CSS, JSX, Python, C++</dd>
               </div>
             </dl>
             {/* Buttons */}
